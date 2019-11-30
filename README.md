@@ -7,7 +7,7 @@ Schedule this container to run alongside any host with a running `redis` contain
 
 ##### Command line
 ```sh
-docker run https://github.com/bkuhl/redis-overcommit-on-host.git -v /proc/sys/vm:/mnt/vm --privileged
+docker run https://github.com/simsasaile/redis-overcommit-on-host.git -v /proc/sys/vm:/mnt/vm --privileged
 ```
 
 ##### Docker Compose
@@ -17,7 +17,7 @@ version: '3'
 services:
   # redis-overcommit-on-host
   redis-overcommit:
-    build: https://github.com/bkuhl/redis-overcommit-on-host.git
+    build: https://github.com/simsasaile/redis-overcommit-on-host.git
     restart: 'no'
     privileged: true
     volumes:
